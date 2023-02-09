@@ -9,8 +9,8 @@ const UserItem = () => {
             <img src="https://api.multiavatar.com/9.png" />
           </div>
           <div className="flex flex-col justify-center font-serif ml-2">
-            <p className="text-green text-base font-semibold">Eric Rodriguez Montilla</p>
-            <p className="mt-[-4px] text-useritem-gray font-normal text-sm">ericrodmon@gmail.com</p>
+            <p className="text-green text-lg font-semibold">Eric Rodriguez Montilla</p>
+            <p className="mt-[-5px] text-useritem-gray font-normal text-sm">ericrodmon@gmail.com</p>
           </div>
         </div>
         <Button type="update">Update User</Button>

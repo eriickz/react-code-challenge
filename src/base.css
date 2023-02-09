@@ -5,3 +5,7 @@
 .user-item-shadow {
   box-shadow: 0px 0px 10px rgba(2, 184, 151, 0.25);
 }
+
+.user-form-shadow {
+  box-shadow: 0px 0px 6px rgba(2, 184, 151, 0.25);
+}

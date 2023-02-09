@@ -15,7 +15,9 @@ module.exports = {
         "button-cancel": "#D4D4D4",
         "button-delete": "#F26969",
         "button-save": "#0281B8",
-        "button-update": "#02B8B3"
+        "button-update": "#02B8B3",
+        "input-gray": "#E3E3E3",
+        "input-placeholder": "#B7B7B7"
       }
     },
   },
