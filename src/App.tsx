@@ -1,5 +1,5 @@
-import { QueryClientProvider, QueryClient } from "react-query"
-import { ReactQueryDevtools } from "react-query/devtools"
+import { QueryClientProvider, QueryClient } from "@tanstack/react-query"
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools"
 import Routes from "./routes"
 import axios from "axios"
 
@@ -9,6 +9,7 @@ const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
       staleTime: 1000 * 20,
+      refetchOnWindowFocus: import.meta.env.PROD,
     },
   },
 })

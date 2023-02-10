@@ -9,7 +9,8 @@ const Routes = () => {
     <Suspense fallback={<>Loading...</>}>
       <Switch>
         <Route path="/users" component={UserList} />
-        <Route path="/userform" component={UserForm} />
+        <Route path="/new-user" component={UserForm} />
+        <Route path="/edit-user/:userId" component={UserForm} />
         <Redirect href="/users" />
       </Switch>
     </Suspense>

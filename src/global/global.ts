@@ -2,11 +2,15 @@ export interface PageThemeProps {
   title: string
   description: string
   iconClassName: string
+  showNewButton: boolean
+  onButtonClick?: () => void
 }
 
 export interface ButtonThemeProps {
   children: React.ReactNode
-  type: "cancel" | "update" | "delete" | "save"
+  btnType: "cancel" | "update" | "delete" | "save" | "new"
+  type?: "button" | "submit"
+  onClick?: () => void
 }
 
 export interface FormControlProps {
