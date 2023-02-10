@@ -24,10 +24,26 @@ const useUserRetriever = () => {
     },
   })
 
+  const deleteUser = async (userId?: string) => {
+    const { isConfirmed } = await Swal.fire({
+      title: "Delete User",
+      text: "Are you sure you want to delete the user?",
+      icon: "warning",
+      showCancelButton: true,
+      cancelButtonText: "Cancel",
+      confirmButtonText: "Delete",
+      confirmButtonColor: "#d33",
+    })
+
+    if (isConfirmed) {
+      deleteUserMutation.mutate(userId)
+    }
+  }
+
   return {
     users,
     isLoading,
-    deleteUserMutation,
+    deleteUser,
   }
 }
 

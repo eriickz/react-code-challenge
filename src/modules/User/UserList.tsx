@@ -5,7 +5,7 @@ import useUserRetriever from "./hooks/useUserRetriever"
 import useLocation from "wouter/use-location"
 
 const UserList: React.FC = () => {
-  const { users, deleteUserMutation } = useUserRetriever()
+  const { users, deleteUser } = useUserRetriever()
   const setLocation = useLocation()[1]
 
   return (
@@ -20,7 +20,7 @@ const UserList: React.FC = () => {
           />
           <div className="flex gap-10 flex-wrap">
             {users?.map((user: User) => (
-              <UserItem key={user.id} user={user} deleteUserMutation={deleteUserMutation} />
+              <UserItem key={user.id} user={user} deleteUser={deleteUser} />
             ))}
           </div>
         </div>

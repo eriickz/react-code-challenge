@@ -9,7 +9,7 @@ export default interface User {
 
 export interface UserItemProps {
   user: User
-  deleteUserMutation: any
+  deleteUser: (userId?: string) => void
 }
 
 export interface UserFormParams {

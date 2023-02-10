@@ -119,6 +119,22 @@ const useUserForm = (userId?: string) => {
     }
   }
 
+  const deleteUser = async (userId?: string) => {
+    const { isConfirmed } = await Swal.fire({
+      title: "Delete User",
+      text: "Are you sure you want to delete the user?",
+      icon: "warning",
+      showCancelButton: true,
+      cancelButtonText: "Cancel",
+      confirmButtonText: "Delete",
+      confirmButtonColor: "#d33",
+    })
+
+    if (isConfirmed) {
+      deleteUserMutation.mutate(userId)
+    }
+  }
+
   return {
     isLoading,
     avatar: getValues("avatar"),
@@ -128,7 +144,7 @@ const useUserForm = (userId?: string) => {
     saveUser,
     handleSubmit,
     isUpdateMode,
-    deleteUserMutation,
+    deleteUser,
   }
 }
 

@@ -6,7 +6,7 @@ import useUserForm from "./hooks/useUserForm"
 
 const UserForm: React.FC = () => {
   const params = useRoute("/edit-user/:userId")[1]
-  const { avatar, register, saveUser, handleSubmit, isUpdateMode, deleteUserMutation } = useUserForm(params?.userId)
+  const { avatar, register, saveUser, handleSubmit, isUpdateMode, deleteUser } = useUserForm(params?.userId)
   const setLocation = useLocation()[1]
 
   const pageTitle = `${isUpdateMode ? "Edit" : "New"} User`
@@ -31,7 +31,7 @@ const UserForm: React.FC = () => {
               </Button>
               <div className="flex">
                 {isUpdateMode && (
-                  <Button type="button" btnType="delete" onClick={() => deleteUserMutation.mutate(params?.userId)}>
+                  <Button type="button" btnType="delete" onClick={() => deleteUser(params?.userId)}>
                     Delete User
                   </Button>
                 )}
