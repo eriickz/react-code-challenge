@@ -1,7 +1,7 @@
 export interface PageThemeProps {
   title: string
   description: string
-  iconClassName: string
+  iconClassName?: string
   showNewButton: boolean
   onButtonClick?: () => void
 }

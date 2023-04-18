@@ -15,12 +15,12 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "baseUrl": "./src",
+    "baseUrl": ".",
     "paths": {
       "@/*": ["./*"],
-      "@modules/*": ["./modules/*"],
-      "@global/*": ["./global/*"],
-      "@components/*": ["./global/components/"]
+      "@modules/*": ["./src/modules/*"],
+      "@global/*": ["./src/global/*"],
+      "@components/*": ["./src/global/components/*"]
     }
   },
   "include": ["src"],

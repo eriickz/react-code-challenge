@@ -2,5 +2,5 @@
   "printWidth": 140,
   "semi": false,
   "bracketSpacing": true,
-  "endOfLine": "crlf"
+  "endOfLine": "lf"
 }
